@@ -6,7 +6,7 @@ services:
         ports:
             - 8080:80
         volumes:
-            - "/home/vagrant/compose/devops_docker_demo/web:/var/www/html"
+            - "${PROJECT_ROOT}:/var/www/html"
         networks:
             - app-network
         depends_on:
@@ -18,6 +18,6 @@ services:
         networks:
             - app-network
         environment:
-            MYSQL_ROOT_PASSWORD: "12345"
+            MYSQL_ROOT_PASSWORD: "{DB_ROOT_PASSWORD}"
 networks:
     app-network:
