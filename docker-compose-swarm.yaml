@@ -7,7 +7,6 @@ services:
             - 8080:80
         volumes:
             - "/home/vagrant/devops_docker_demo/web:/var/www/html:ro"
-            - "/home/vagrant/devops_docker_demo/token:/devops_docker_demo/token"
         networks:
             - app-network
     db:
